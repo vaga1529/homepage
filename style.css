@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -21,6 +22,34 @@ nav ul li {
   margin-left: 10px;
 }
 
+nav ul li a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
 .nav-link {
   display: inline-block;
   color: #333;
@@ -34,7 +63,6 @@ nav ul li {
   background-color: #f8f9fa;
   color: rgb(92, 89, 230);
 }
-
 /* 반응형 네비게이션 바 */
 @media (max-width: 768px) {
   header {
@@ -111,14 +139,14 @@ nav ul li {
   padding: 5px;
   border: 1px solid #333;
   border-radius: 5px;
-  background-color: #f9faf9;
+  background-color: #a7eea7;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .sns-toggle-btn:hover {
-  background-color: #3150ff;
+  background-color: #fafbfd;
   color: #fff;
 }
 
@@ -165,4 +193,19 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
+}
+
+.gallery-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-image:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s;
 }
