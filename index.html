@@ -12,64 +12,71 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
     />
+
     <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMk}pxU_E"
-      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
     />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap">
-
-
     <link rel="stylesheet" href="style.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
+    <script>
+      document
+        .querySelector("input[type='search']")
+        .addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+            event.preventDefault() // 기본 동작 차단
+            console.log('검색어: ' + this.value) // 검색어 표시
+            // 검색 동작을 처리합니다.
+          }
+        })
+    </script>
     <script src="script.js"></script>
   </head>
   <body>
-     <!-- Header -->
-     <header class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"
-              ><img src="images/logo.png" alt="My Art Website Logo" height="50"
-            /></a>
-            
-      <nav>
-        <ul>
-          <li><a href="#" class="nav-link" data-content="home">Home</a></li>
-          <li>
-            <a href="#" class="nav-link" data-content="artists">artists</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link" data-content="gallery">gallery</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link" data-content="community">community</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link" data-content="nft-market">nft-market</a>
-          </li>
-        </ul>
-      </nav>
-       <!-- 검색창 추가 -->
-       <form class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
-      <!-- 검색창 추가 끝 -->
-    </header>
+    <!-- Header -->
+    <header class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="images/logo.png" alt="My Art Website Logo" height="50"
+          /></a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
+          <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-content="home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-content="artists">artists</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-content="gallery">gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-content="community"
+                  >community</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <!-- Main Content -->
     <div class="container">
       <!-- The rest of your content -->
@@ -114,6 +121,7 @@
 
     <main id="main-content"></main>
   </body>
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -131,8 +139,4 @@
     </div>
   </footer>
   <!-- Footer End -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
 </html>
