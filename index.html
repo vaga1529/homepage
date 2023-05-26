@@ -17,10 +17,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
 
     <link rel="stylesheet" href="style.css" />
 
@@ -39,6 +35,24 @@
           }
         })
     </script>
+
+    <!-- Add Firebase config snippet -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script>
+      // Replace with your Firebase config snippet
+      var firebaseConfig = {
+        apiKey: 'API_KEY',
+        authDomain: 'AUTH_DOMAIN',
+        projectId: 'PROJECT_ID',
+        storageBucket: 'STORAGE_BUCKET',
+        messagingSenderId: 'MESSAGING_SENDER_ID',
+        appId: 'APP_ID',
+      }
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig)
+    </script>
+
     <script src="script.js"></script>
   </head>
   <body>

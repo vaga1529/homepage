@@ -270,6 +270,33 @@
 </div>
 
 <div id="community" class="page-content">
-  <h1>커뮤니티</h1>
-  <p>커뮤니티에 가입하고 여러분의 관심사를 이야기해보세요.</p>
+  <div class="container">
+    <div class="header"></div>
+    <div class="board-bg">
+      <h3>게시물 작성</h3>
+      <input type="text" id="postTitle" placeholder="제목" />
+      <textarea id="postBody" rows="5" placeholder="내용"></textarea>
+      <button class="save" id="submitButton">저장</button>
+    </div>
+    <div class="board-bg">
+      <h2>목록</h2>
+      <ul class="list" id="posts"></ul>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js"></script>
+  <script>
+    // Replace with your Firebase config snippet
+    const firebaseConfig = {
+      apiKey: 'API_KEY',
+      authDomain: 'AUTH_DOMAIN',
+      projectId: 'PROJECT_ID',
+      storageBucket: 'STORAGE_BUCKET',
+      messagingSenderId: 'MESSAGING_SENDER_ID',
+      appId: 'APP_ID',
+    }
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig)
+  </script>
+  <script src="script.js"></script>
 </div>

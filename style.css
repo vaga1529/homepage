@@ -209,3 +209,108 @@ body {
   height: auto;
   transition: transform 0.6s;
 }
+
+/* 게시판 시작 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+h3 {
+  text-align: center;
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+button {
+  font-size: 16px;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.save {
+  background-color: #2196f3;
+  color: white;
+  margin-top: 16px;
+}
+
+.cancel {
+  background-color: #f44336;
+  color: white;
+  margin-left: 10px;
+}
+
+.board-bg {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list li {
+  text-decoration: none;
+  list-style: none;
+  padding: 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.list li:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+
+  .board-bg {
+    padding: 10px;
+  }
+}
+
+/* 게시판 끝 */
