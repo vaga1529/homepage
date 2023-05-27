@@ -320,47 +320,7 @@ button:hover {
 
 /* 게시판 끝 */
 
-/* 흐르는 텍스트 시작 */
-.scrolling-text-container {
-  font-size: 1.5rem;
-  box-sizing: border-box;
-  padding-left: 15%;
-  padding-right: 15%;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  padding: 10px 0;
+.coupang-ad {
+  text-align: center; /* example */
+  margin-bottom: 10px; /* example */
 }
-
-.scrolling-text {
-  display: inline-block;
-  animation: scrolling-text-animation 40s linear infinite;
-  margin: 0;
-}
-
-@keyframes scrolling-text-animation {
-  0% {
-    transform: translateX(150%);
-  }
-  100% {
-    transform: translateX(-150%);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .scrolling-text-container {
-    font-size: 1rem;
-  }
-
-  .scrolling-text {
-    white-space: nowrap;
-    text-overflow: clip;
-  }
-}
-
-/* 흐르는 텍스트 시작 */
