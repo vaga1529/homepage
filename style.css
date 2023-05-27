@@ -324,3 +324,7 @@ button:hover {
   text-align: center; /* example */
   margin-bottom: 10px; /* example */
 }
+
+main {
+  margin-bottom: 70px;
+}
