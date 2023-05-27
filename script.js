@@ -100,3 +100,23 @@ firebase
   .on('value', function (snapshot) {
     displayPosts(snapshot.val())
   })
+
+document.addEventListener('DOMContentLoaded', function () {
+  const app = document.getElementById('app')
+  fetch('main.html')
+    .then((response) => response.text())
+    .then((html) => {
+      app.innerHTML = html
+      const closeBtn = document.querySelector('.close-btn')
+      const scrollingTextContainer = document.querySelector(
+        '.scrolling-text-container'
+      )
+
+      closeBtn.addEventListener('click', () => {
+        scrollingTextContainer.style.display = 'none'
+      })
+    })
+    .catch((error) => {
+      console.warn(error)
+    })
+})

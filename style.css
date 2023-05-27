@@ -161,11 +161,17 @@ nav ul li a:hover {
 footer {
   background-color: #f8f9fa;
   padding: 10px 0;
-  position: fixed; /* 추가 */
-  bottom: 0; /* 추가 */
-  left: 0; /* 추가 */
-  right: 0; /* 추가 */
-  z-index: 1030; /* 추가 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  text-align: center;
+}
+
+footer .row {
+  display: flex; /* 추가 */
+  justify-content: center; /* 추가 */
 }
 
 @media (max-width: 767px) {
@@ -174,14 +180,13 @@ footer {
   }
 
   footer .col-md-6 {
-    text-align: center;
     margin-top: 10px;
   }
 }
 
 /* 푸터에 고정된 위치 설정으로 인한 본문 내용 겹침 방지 추가 */
 body {
-  padding-bottom: 60px; /* 푸터 높이와 동일하게 설정 */
+  padding-bottom: 50px; /* 푸터 높이와 동일하게 설정 */
 }
 
 /* Carousel Styles */
@@ -314,3 +319,48 @@ button:hover {
 }
 
 /* 게시판 끝 */
+
+/* 흐르는 텍스트 시작 */
+.scrolling-text-container {
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right: 15%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  padding: 10px 0;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scrolling-text-animation 40s linear infinite;
+  margin: 0;
+}
+
+@keyframes scrolling-text-animation {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scrolling-text-container {
+    font-size: 1rem;
+  }
+
+  .scrolling-text {
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+}
+
+/* 흐르는 텍스트 시작 */
